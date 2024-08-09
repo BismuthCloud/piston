@@ -82,7 +82,7 @@ case $1 in
 
     build-pkg)
         PKGSLUG="$2-$3"
-        BUILDER="${4:-ghcr.io/BismuthCloud/piston/repo-builder}"
+        BUILDER="${4:-ghcr.io/bismuthcloud/piston/repo-builder}"
         echo "Building $PKGSLUG"
         echo "Ensuring latest builder image"
         docker build repo -t "$BUILDER"

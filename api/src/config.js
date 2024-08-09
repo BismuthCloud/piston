@@ -105,7 +105,7 @@ const options = {
     repo_url: {
         desc: 'URL of repo index',
         default:
-            'https://github.com/BismuthCloud/piston/releases/download/pkgs/index',
+            'https://github.com/bismuthcloud/piston/releases/download/pkgs/index',
         validators: [],
     },
     max_concurrent_jobs: {

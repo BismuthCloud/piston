@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
     api:
-        image: ghcr.io/BismuthCloud/piston
+        image: ghcr.io/bismuthcloud/piston
         container_name: piston_api
         restart: always
         ports:

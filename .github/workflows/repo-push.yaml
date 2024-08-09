@@ -28,4 +28,4 @@ jobs:
                   pull: true
                   push: true
                   tags: |
-                      docker.pkg.github.com/BismuthCloud/piston/repo-builder
+                      docker.pkg.github.com/bismuthcloud/piston/repo-builder

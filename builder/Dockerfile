@@ -1,2 +1,2 @@
-FROM ghcr.io/BismuthCloud/piston:latest
+FROM ghcr.io/bismuthcloud/piston:latest
 ADD . /piston/packages/
