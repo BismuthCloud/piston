@@ -86,7 +86,7 @@ const options = {
     },
     run_timeout: {
         desc: 'Max time allowed for run stage in milliseconds',
-        default: 3000, // 3 seconds
+        default: 15000, // 15 seconds
         parser: parse_int,
         validators: [(x, raw) => !is_nan(x) || `${raw} is not a number`],
     },
