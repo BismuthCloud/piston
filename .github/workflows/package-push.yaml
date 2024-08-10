@@ -21,7 +21,7 @@ jobs:
               with:
                   username: ${{ github.actor }}
                   password: ${{ secrets.GITHUB_TOKEN }}
-                  registry: docker.pkg.github.com
+                  registry: ghcr.io
 
             - name: Get list of changed files
               uses: lots0logs/gh-action-get-changed-files@2.1.4

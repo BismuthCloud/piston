@@ -19,7 +19,7 @@ jobs:
               with:
                   username: ${{ github.actor }}
                   password: ${{ secrets.GITHUB_TOKEN }}
-                  registry: docker.pkg.github.com
+                  registry: ghcr.io
 
             - name: Build and push repo
               uses: docker/build-push-action@v4
@@ -28,4 +28,4 @@ jobs:
                   pull: true
                   push: true
                   tags: |
-                      docker.pkg.github.com/bismuthcloud/piston/repo-builder
+                      ghcr.io/bismuthcloud/piston/repo-builder

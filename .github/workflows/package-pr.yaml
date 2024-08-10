@@ -43,7 +43,7 @@ jobs:
               with:
                   username: ${{ github.actor }}
                   password: ${{ secrets.GITHUB_TOKEN }}
-                  registry: docker.pkg.github.com
+                  registry: ghcr.io
 
             - name: Get list of changed files
               uses: lots0logs/gh-action-get-changed-files@2.1.4
@@ -84,13 +84,13 @@ jobs:
               with:
                   username: ${{ github.actor }}
                   password: ${{ secrets.GITHUB_TOKEN }}
-                  registry: docker.pkg.github.com
+                  registry: ghcr.io
 
             - name: Run tests
               run: |
                   ls -la
-                  docker run -v $(pwd)'/repo:/piston/repo' -v $(pwd)'/packages:/piston/packages' -d --name repo docker.pkg.github.com/bismuthcloud/piston/repo-builder --no-build
-                  docker pull docker.pkg.github.com/bismuthcloud/piston/api
+                  docker run -v $(pwd)'/repo:/piston/repo' -v $(pwd)'/packages:/piston/packages' -d --name repo ghcr.io/bismuthcloud/piston/repo-builder --no-build
+                  docker pull ghcr.io/bismuthcloud/piston/api
                   docker build -t piston-api api
                   docker run --network container:repo -v $(pwd)'/data:/piston' -e PISTON_LOG_LEVEL=DEBUG -e 'PISTON_REPO_URL=http://localhost:8000/index' -d --name api piston-api
                   echo Waiting for API to start..
